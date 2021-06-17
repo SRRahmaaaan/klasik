@@ -23,7 +23,7 @@ html {
   z-index: 111111;
 }
 .navbar.active {
-  padding: 10px;
+  padding: 15px;
   background-color: #313840;
 }
 .navbar .flex {
@@ -87,6 +87,9 @@ html {
   color: var(--default-color);
 }
 /* Banner */
+#home {
+  padding: 0;
+}
 #home .slider {
   min-height: 100vh;
   width: 100%;
@@ -154,4 +157,100 @@ button#prev {
 }
 button#next {
   right: 0;
+}
+/* About */
+.about .grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.about .details p {
+  text-align: justify;
+  color: #898989;
+}
+.about .skills .skill {
+  position: relative;
+  height: 25px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.about .skills .skill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e1e1e1;
+}
+.about .skills .skill .skill-bar {
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  background-color: var(--default-color);
+  padding: 1px 0 10px 10px;
+}
+.about .skills .skill .skill-bar.hc {
+  width: 85%;
+}
+.about .skills .skill .skill-bar.wp {
+  width: 75%;
+}
+.about .skills .skill .skill-bar.lv {
+  width: 65%;
+}
+.about .skills .skill .skill-bar p {
+  font-size: 1rem;
+  color: var(--light-color);
+}
+.about .skills .skill .skill-bar span {
+  position: absolute;
+  top: -13px;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background-color: var(--default-color);
+  color: var(--light-color);
+  font-size: 1.2rem;
+  padding: 13px 8px;
+}
+.about .skills .skill .skill-bar span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -12px;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 0 0 14px 13px;
+  border-color: transparent transparent #0984e3b3 transparent;
+}
+.about .skills .skill .skill-bar span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -12px;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 0 13px 13px 0;
+  border-color: transparent #0984e3b3 transparent transparent;
+}
+/* Why - section */
+.why-section {
+  background: url("../media/about-bg.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.why-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+.why-section .section-head h2 {
+  color: var(--light-color);
 }
