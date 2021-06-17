@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --dark-color: #000;
+  --default-color: #0984e3;
+  --light-color: #fff;
+}
+/* Navbar */
+.navbar {
+  padding: 25px 0;
+  transition: all 0.5s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 111111;
+}
+.navbar.active {
+  padding: 10px;
+  background-color: #313840;
+}
+.navbar .flex {
+  justify-content: space-between;
+}
+.navbar .navigation ul {
+  position: relative;
+}
+.navbar .navigation ul::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  height: 1px;
+  width: 100%;
+  background-color: var(--default-color);
+  display: block;
+}
+.navbar .navigation ul::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 1px;
+  width: 100%;
+  background-color: var(--default-color);
+  display: block;
+}
+.navbar .navigation ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.navbar .container nav ul li.active a::before,
+.navbar .navigation ul li a:hover::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  background-color: var(--default-color);
+}
+.navbar .container nav ul li.active a::after,
+.navbar .navigation ul li a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  background-color: var(--default-color);
+}
+.navbar .navigation ul li a {
+  color: var(--light-color);
+  transition: all 0.5s;
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+}
+.navbar .navigation ul li a:hover {
+  color: var(--default-color);
+}
+/* Banner */
+#home .slider {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  color: var(--light-color);
+}
+#home .slider .flex {
+  flex-direction: column;
+}
+#home .slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+#home .slider .slide h1 {
+  font-size: 75px;
+  font-weight: 900;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+#home .slider .slide p {
+  font-size: 30px;
+}
+#home .slider .slide.current {
+  opacity: 1;
+}
+#home .slider .slide:first-child {
+  background: url("../media/banner/1.jpg") no-repeat center center;
+  background-size: cover;
+}
+#home .slider .slide:nth-child(2) {
+  background: url("../media/banner/2.jpg") no-repeat center center;
+  background-size: cover;
+}
+#home .slider .slide:last-child {
+  background: url("../media/banner/3.jpg") no-repeat center center;
+  background-size: cover;
+}
+.buttons button {
+  height: 120px;
+  width: 150px;
+  border: none;
+  background-color: var(--default-color);
+  color: var(--light-color);
+  cursor: pointer;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  position: absolute;
+  top: 45%;
+  padding: 2rem 0;
+  transition: all 0.7s ease-in-out;
+  opacity: 0.6;
+}
+.buttons button:hover {
+  opacity: 1;
+}
+button#prev {
+  left: 0;
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+button#next {
+  right: 0;
+}
