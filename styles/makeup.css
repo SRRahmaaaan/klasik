@@ -242,7 +242,7 @@ button#next {
   z-index: 1;
 }
 .why-section::before,
-.testimonial .container::before {
+#testimonial::before {
   content: "";
   position: absolute;
   top: 0;
@@ -252,7 +252,8 @@ button#next {
   background: rgba(0, 0, 0, 0.8);
   z-index: -1;
 }
-.why-section .section-head h2 {
+.why-section .section-head h2,
+#testimonial .section-head h2 {
   color: var(--light-color);
 }
 .why-section .container .grid {
@@ -542,12 +543,37 @@ button#next {
 /* Testimonial */
 #testimonial {
   background: #ededed;
-}
-.testimonial .container {
-  max-width: 100%;
   background: url("../media/testimonials/testimonial-bg.jpg") no-repeat;
   background-size: cover;
-  position: relative;
-  min-height: 100vh;
   z-index: 1;
+  position: relative;
+}
+.testimonial .slide-row .slide-col .imgBx {
+  height: 160px;
+  width: 160px;
+  margin: auto;
+}
+.testimonial .slide-row .slide-col .imgBx img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.testimonial .slide-row .slide-col .content .titles h3 {
+  font-size: 30px;
+}
+.testimonial .slide-row .slide-col .content .titles p {
+  font-size: 18px;
+}
+.testimonial .container .indicator .btn {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: var(--light-color);
+  border: 1px solid var(--default-color);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.testimonial .container .indicator .btn.active {
+  background-color: var(--default-color);
 }

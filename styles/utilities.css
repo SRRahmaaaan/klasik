@@ -43,6 +43,9 @@ w-50 {
 .d-color {
   color: var(--default-color);
 }
+.l-color {
+  color: var(--light-color);
+}
 .section-head {
   text-align: center;
   margin-bottom: 70px;
@@ -108,10 +111,10 @@ w-50 {
   transition: all 0.5s ease-in-out;
   z-index: -1;
 }
-.text-center{
+.text-center {
   text-align: center;
 }
-.d-flex{
+.d-flex {
   display: flex;
 }
 /* Margins */
