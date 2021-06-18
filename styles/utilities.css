@@ -108,6 +108,12 @@ w-50 {
   transition: all 0.5s ease-in-out;
   z-index: -1;
 }
+.text-center{
+  text-align: center;
+}
+.d-flex{
+  display: flex;
+}
 /* Margins */
 .m-1 {
   margin: 1rem;

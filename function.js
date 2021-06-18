@@ -87,3 +87,40 @@ if (auto) {
         nextSlide();
     }, intervalTime);
 }
+// ================================================== ACCORDIONS=============================================
+const accBtns = document.querySelectorAll(".accordion-header");
+const accContents = document.querySelectorAll(".accordion-body");
+
+accBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        accContents.forEach((acc) => {
+            if (e.target.nextElementSibling !== acc && acc.classList.contains("active")) {
+                acc.classList.remove("active")
+                accBtns.forEach((btns) => btns.classList.remove("active"))
+            }
+        })
+        const panel = btn.nextElementSibling;
+        panel.classList.toggle("active")
+        btn.classList.toggle("active")
+    })
+})
+// ============================================ IMAGE FILTER GAllERY=============================================
+const filterContainer = document.querySelector(".gallery-filter");
+const galleryItems = document.querySelectorAll(".gallery-item")
+
+filterContainer.addEventListener("click", (event) => {
+    if (event.target.classList.contains("filter-item")) {
+        document.querySelector(".on").classList.remove("on");
+        event.target.classList.add("on");
+        const filterValue = event.target.getAttribute("data-filter")
+        galleryItems.forEach((item) => {
+            if (item.classList.contains(filterValue) || filterValue === "all") {
+                item.classList.remove("hide")
+                item.classList.add("show")
+            } else {
+                item.classList.remove("show")
+                item.classList.add("hide")
+            }
+        })
+    }
+})
