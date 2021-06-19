@@ -242,7 +242,9 @@ button#next {
   z-index: 1;
 }
 .why-section::before,
-#testimonial::before {
+#testimonial::before,
+.recent-work::before,
+.pricing .pricing-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -253,7 +255,8 @@ button#next {
   z-index: -1;
 }
 .why-section .section-head h2,
-#testimonial .section-head h2 {
+#testimonial .section-head h2,
+.recent-work .section-head h2 {
   color: var(--light-color);
 }
 .why-section .container .grid {
@@ -548,23 +551,39 @@ button#next {
   z-index: 1;
   position: relative;
 }
-.testimonial .slide-row .slide-col .imgBx {
+.testimonial .slider {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.testimonial .slider .slider-box {
+  width: 300%;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+  gap: 20px;
+}
+.testimonial .slider .slide-col {
+  width: 100%;
+}
+.testimonial .slider .slide-col .imgBx {
   height: 160px;
   width: 160px;
   margin: auto;
 }
-.testimonial .slide-row .slide-col .imgBx img {
+.testimonial .slider .slide-col .imgBx img {
   height: 100%;
   width: 100%;
   border-radius: 50%;
+  object-fit: cover;
 }
-.testimonial .slide-row .slide-col .content .titles h3 {
+.testimonial .slider .slide-col .content .titles h3 {
   font-size: 30px;
 }
-.testimonial .slide-row .slide-col .content .titles p {
+.testimonial .slider .slide-col .content .titles p {
   font-size: 18px;
 }
-.testimonial .container .indicator .btn {
+.testimonial .container .indicator .btn,
+.recent-work .controllers .control {
   display: inline-block;
   height: 20px;
   width: 20px;
@@ -574,6 +593,159 @@ button#next {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-.testimonial .container .indicator .btn.active {
+.testimonial .container .indicator .btn.active,
+.recent-work .controllers .control.active {
   background-color: var(--default-color);
+}
+/* How We Work Section */
+.we-work .grid {
+  grid-template-columns: repeat(6, 1fr);
+}
+.we-work .box {
+  color: #656565;
+  padding: 1.5rem 0;
+  position: relative;
+}
+.we-work .box:hover::before,
+.we-work .box:hover::after,
+.we-work .box:hover .s-1,
+.we-work .box:hover .s-2 {
+  width: 100%;
+  height: 100%;
+}
+.we-work .box::before,
+.we-work .box::after {
+  transition: all 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 20%;
+  border-top: 1px solid #656565;
+}
+.we-work .box::before {
+  left: 0;
+  border-left: 1px solid #656565;
+}
+.we-work .box::after {
+  right: 0;
+  border-right: 1px solid #656565;
+}
+.we-work .box .s-1,
+.we-work .box .s-2 {
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  width: 20%;
+  height: 20%;
+  border-bottom: 1px solid #656565;
+}
+.we-work .box .s-1 {
+  left: 0;
+  border-left: 1px solid #656565;
+}
+.we-work .box .s-2 {
+  right: 0;
+  border-right: 1px solid #656565;
+}
+.we-work .box i {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.we-work .box h3 {
+  transition: all 0.5s ease-in-out;
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.we-work .box:hover h3,
+.we-work .box:hover i {
+  color: var(--default-color);
+}
+/* Recent Work */
+.recent-work {
+  background: url("../media/work/work-bg.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.recent-work p {
+  font-size: 23px;
+  line-height: 35px;
+  width: 75%;
+  margin: 0 auto;
+}
+.recent-work .projects {
+  margin: 5rem auto 0 auto;
+  background: url("../media/work/mac.png") no-repeat center center;
+  background-size: cover;
+  height: 450px;
+  width: 70%;
+  padding: 1.9rem 6.5rem 0 6.5rem;
+  z-index: 1;
+}
+.recent-work .projects .project {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.recent-work .projects .project-inner {
+  width: 300%;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+.recent-work .projects .project-inner .item {
+  flex: 1;
+  height: 362px;
+  z-index: -1;
+}
+.recent-work .projects .project-inner .item img {
+  height: 100%;
+}
+/* Pricing */
+#pricing {
+  padding: 6rem 0 0 0;
+}
+.pricing .section-head {
+  margin-bottom: 150px;
+}
+.pricing .pricing-container {
+  background: url("../media/table-bg.jpg") no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+}
+.pricing .grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.pricing .card {
+  background-color: var(--light-color);
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-99px);
+}
+.pricing .card:hover {
+  box-shadow: 20px 30px 50px rgba(255, 255, 255, 0.3);
+}
+.pricing .card .d-bg {
+  padding: 20px 0;
+}
+.pricing .card .d-bg h3 {
+  font-size: 30px;
+  font-weight: 300;
+}
+.pricing .card .d-bg p {
+  font-size: 18px;
+}
+.pricing .card li {
+  padding: 15px 0;
+  font-size: 18px;
+}
+.pricing .card li:nth-child(2n) {
+  background: #bdbdbd;
+  color: var(--light-color);
+}
+.pricing .m-button {
+  color: var(--default-color);
+  font-weight: 900;
 }

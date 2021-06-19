@@ -130,3 +130,52 @@ filterContainer.addEventListener("click", (event) => {
   }
 });
 // ============================================ CAROUSEL=============================================
+const indicators = document.getElementsByClassName("btn");
+const sliders = document.getElementById("slider-box")
+
+indicators[0].onclick = (e) => {
+  sliders.style.transform = "translateX(-0%)"
+  for (let i = 0; i < indicators.length; i++) {
+    indicators[i].classList.remove("active")
+  }
+  e.target.classList.add("active")
+}
+indicators[1].onclick = (e) => {
+  sliders.style.transform = "translateX(-33%)"
+   for (let i = 0; i < indicators.length; i++) {
+     indicators[i].classList.remove("active");
+   }
+   e.target.classList.add("active");
+}
+indicators[2].onclick = (e) => {
+  sliders.style.transform = "translateX(-67%)"
+   for (let i = 0; i < indicators.length; i++) {
+     indicators[i].classList.remove("active");
+   }
+   e.target.classList.add("active");
+}
+// ============================================ CAROUSEL 2=============================================
+const controllers = document.getElementsByClassName("control");
+const items = document.getElementById("project-inner")
+
+controllers[0].onclick = (e) => {
+  items.style.transform = "translateX(0)"
+  for (let i = 0; i < controllers.length; i++) {
+    controllers[i].classList.remove("active")
+  }
+  e.target.classList.add("active")
+}
+controllers[1].onclick = (e) => {
+  items.style.transform = "translateX(-33%)"
+  for (let i = 0; i < controllers.length; i++) {
+    controllers[i].classList.remove("active")
+  }
+  e.target.classList.add("active")
+}
+controllers[2].onclick = (e) => {
+  items.style.transform = "translateX(-66%)"
+  for (let i = 0; i < controllers.length; i++) {
+    controllers[i].classList.remove("active")
+  }
+  e.target.classList.add("active")
+}
