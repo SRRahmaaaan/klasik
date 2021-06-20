@@ -7,7 +7,7 @@ ul {
   list-style-type: none;
 }
 img {
-  max-width: 100%;
+  width: 100%;
 }
 p {
   font-size: 14px;
@@ -56,6 +56,7 @@ w-50 {
 .section-head {
   text-align: center;
   margin-bottom: 70px;
+  position: relative;
 }
 .section-head h2 {
   font-weight: 900;
@@ -65,25 +66,26 @@ w-50 {
   border-bottom: 1px solid var(--default-color);
   font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 1px;
+  padding: 10px 0;
 }
 .section-head span {
   color: var(--default-color);
   position: relative;
 }
-.section-head span::before {
+.section-head h2::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
   background-color: var(--default-color);
 }
-.section-head span::after {
+.section-head h2::after {
   content: "";
   position: absolute;
-  bottom: -11px;
+  bottom: -9px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 10px;

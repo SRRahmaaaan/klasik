@@ -32,6 +32,9 @@ html {
 .navbar .navigation ul {
   position: relative;
 }
+.navbar i {
+  display: none;
+}
 .navbar .navigation ul::before {
   content: "";
   position: absolute;
@@ -160,7 +163,8 @@ button#next {
 }
 /* About */
 .about .grid,
-.contact .grid {
+.contact .grid,
+.why-section .container .grid {
   grid-template-columns: repeat(2, 1fr);
 }
 .about .details p {
@@ -263,9 +267,6 @@ button#next {
 #contact .section-head h2 {
   color: var(--light-color);
 }
-.why-section .container .grid {
-  grid-template-columns: repeat(2, 1fr);
-}
 .why-section .imgBx {
   overflow: hidden;
   position: relative;
@@ -273,6 +274,7 @@ button#next {
 .why-section .imgBx img {
   opacity: 0.6;
   transition: all 0.3s ease-in-out;
+  width: 100%;
 }
 .why-section .imgBx:hover img {
   opacity: 1;
@@ -292,8 +294,7 @@ button#next {
   opacity: 1;
 }
 .why-section .accordion {
-  overflow: hidden;
-  height: 400px;
+  height: 450px;
 }
 .why-section .accordion .accordion-item {
   margin-bottom: 5px;
@@ -437,6 +438,9 @@ button#next {
   transform: scale(0);
   transition: all 0.5s ease-in-out;
   color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .portfolio .gallery-item:hover .content {
   transform: scale(1);
@@ -787,18 +791,19 @@ button#next {
   height: 468px;
   position: relative;
 }
-.team .card:hover .imgBx {
-  margin-top: 0;
-}
 .team .card .imgBx {
   transition: all 0.5s ease-in-out;
   margin-top: -100px;
+}
+.team .card:hover .imgBx {
+  margin-top: 0;
 }
 .team .card .social i {
   border: 1px solid var(--light-color);
   color: var(--light-color);
   padding: 7px;
   cursor: pointer;
+  margin-top: 5px;
 }
 .team .card .social i.lni-facebook:hover {
   background-color: #3b5998;
@@ -902,7 +907,6 @@ button#next {
   background-color: var(--default-color);
   color: var(--light-color);
   font-size: 3rem;
-  padding-top: 6rem;
   transform: scale(0.3);
   opacity: 0;
   transition: all 0.5s ease-in-out;
@@ -1030,7 +1034,6 @@ textarea {
   display: inline-block;
   border-bottom: 1px solid var(--default-color);
   cursor: pointer;
-
 }
 .footer .fourth span:hover {
   border-bottom: 1px solid var(--light-color);

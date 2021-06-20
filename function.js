@@ -89,7 +89,7 @@ if (auto) {
     nextSlide();
   }, intervalTime);
 }
-// ================================================== ACCORDIONS=============================================
+// // ================================================== ACCORDIONS=============================================
 const accBtns = document.querySelectorAll(".accordion-header");
 const accContents = document.querySelectorAll(".accordion-body");
 
@@ -131,51 +131,65 @@ filterContainer.addEventListener("click", (event) => {
 });
 // ============================================ CAROUSEL=============================================
 const indicators = document.getElementsByClassName("btn");
-const sliders = document.getElementById("slider-box")
+const sliders = document.getElementById("slider-box");
 
 indicators[0].onclick = (e) => {
-  sliders.style.transform = "translateX(-0%)"
+  sliders.style.transform = "translateX(-0%)";
   for (let i = 0; i < indicators.length; i++) {
-    indicators[i].classList.remove("active")
+    indicators[i].classList.remove("active");
   }
-  e.target.classList.add("active")
-}
+  e.target.classList.add("active");
+};
 indicators[1].onclick = (e) => {
-  sliders.style.transform = "translateX(-33%)"
-   for (let i = 0; i < indicators.length; i++) {
-     indicators[i].classList.remove("active");
-   }
-   e.target.classList.add("active");
-}
+  sliders.style.transform = "translateX(-33%)";
+  for (let i = 0; i < indicators.length; i++) {
+    indicators[i].classList.remove("active");
+  }
+  e.target.classList.add("active");
+};
 indicators[2].onclick = (e) => {
-  sliders.style.transform = "translateX(-67%)"
-   for (let i = 0; i < indicators.length; i++) {
-     indicators[i].classList.remove("active");
-   }
-   e.target.classList.add("active");
-}
+  sliders.style.transform = "translateX(-67%)";
+  for (let i = 0; i < indicators.length; i++) {
+    indicators[i].classList.remove("active");
+  }
+  e.target.classList.add("active");
+};
 // ============================================ CAROUSEL 2=============================================
 const controllers = document.getElementsByClassName("control");
-const items = document.getElementById("project-inner")
+const items = document.getElementById("project-inner");
 
 controllers[0].onclick = (e) => {
-  items.style.transform = "translateX(0)"
+  items.style.transform = "translateX(0)";
   for (let i = 0; i < controllers.length; i++) {
-    controllers[i].classList.remove("active")
+    controllers[i].classList.remove("active");
   }
-  e.target.classList.add("active")
-}
+  e.target.classList.add("active");
+};
 controllers[1].onclick = (e) => {
-  items.style.transform = "translateX(-33%)"
+  items.style.transform = "translateX(-33%)";
   for (let i = 0; i < controllers.length; i++) {
-    controllers[i].classList.remove("active")
+    controllers[i].classList.remove("active");
   }
-  e.target.classList.add("active")
-}
+  e.target.classList.add("active");
+};
 controllers[2].onclick = (e) => {
-  items.style.transform = "translateX(-66%)"
+  items.style.transform = "translateX(-66%)";
   for (let i = 0; i < controllers.length; i++) {
-    controllers[i].classList.remove("active")
+    controllers[i].classList.remove("active");
   }
-  e.target.classList.add("active")
-}
+  e.target.classList.add("active");
+};
+// ============================================ Making Navbar Responsive==========================================
+const menuBtn = document.getElementById("menuBar");
+const crossBtn = document.getElementById("crossBar");
+const menuBar = document.querySelector(".navbar .container .navigation ul");
+const body = document.querySelector("body");
+
+menuBtn.onclick = () => {
+  menuBar.classList.add("active");
+    body.style.overflow = "hidden";
+};
+crossBtn.onclick = () => {
+  menuBar.classList.remove("active")
+  body.style.overflow = "auto";
+};

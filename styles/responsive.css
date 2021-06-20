@@ -1,0 +1,219 @@
+@media screen and (max-width: 1200px) {
+  .recent-work {
+    display: none;
+  }
+  .team .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .service .grid,
+  .portfolio .grid,
+  .fun-fact .grid,
+  .footer .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .navbar .navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #313840;
+    padding: 5.5rem 0 2rem 0;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar .navigation ul.active {
+    transform: translateY(0);
+  }
+  #menuBar {
+    display: block;
+    color: var(--light-color);
+    position: absolute;
+    right: 3rem;
+    cursor: pointer;
+  }
+  .navbar .navigation ul i {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 23px;
+    cursor: pointer;
+    color: #ea2027;
+    font-weight: 900;
+  }
+  .navbar .navigation ul li {
+    display: block;
+    border-top: 1px solid var(--default-color);
+    padding: 0.5rem 0 0.5rem 2rem;
+  }
+  .navbar .navigation ul li a {
+    font-size: 1.5rem;
+  }
+  .navbar .container nav ul li.active a::before,
+  .navbar .navigation ul li a:hover::before {
+    top: -9px;
+  }
+  .navbar .navigation ul::before,
+  .navbar .navigation ul::after,
+  .navbar .container nav ul li.active a::after,
+  .navbar .navigation ul li a:hover::after {
+    display: none;
+  }
+  #home .slider .slide h1 {
+    font-size: 50px;
+  }
+  #home .slider .slide p {
+    font-size: 20px;
+  }
+  .about .skills .skill {
+    margin-bottom: 2rem;
+  }
+  .we-work .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .quote .flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .clients .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .blog .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  section {
+    padding: 2rem 0;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+  .section-head h2 {
+    font-size: 40px;
+  }
+  .about .grid,
+  .why-section .container .grid,
+  .service .grid,
+  .portfolio .grid,
+  .team .grid,
+  .contact .grid,
+  .footer .grid {
+    grid-template-columns: 1fr;
+  }
+  #menuBar {
+    right: 10px;
+  }
+  #home .slider .slide h1,
+  .quote h3 {
+    font-size: 30px;
+  }
+  #home .slider .slide p {
+    font-size: 14px;
+  }
+  .why-section .imgBx .overlap {
+    display: none;
+  }
+  .portfolio .gallery-filter {
+    display: block;
+    padding: 1rem;
+  }
+  .portfolio .gallery-filter::before {
+    display: none;
+  }
+  .testimonial .slider {
+    width: 100%;
+  }
+  .we-work .grid,
+  .pricing .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact .form .d-flex {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section-head h2 {
+    font-size: 30px;
+  }
+  .navbar {
+    background-color: #313840;
+  }
+  .navbar .navigation ul {
+    width: 100%;
+  }
+  .navbar .navigation ul li a {
+    font-size: 1.2rem;
+  }
+  .buttons {
+    display: none;
+  }
+  #home .slider {
+    min-height: 50vh;
+  }
+  #home .slider .slide h1,
+  .quote h3 {
+    font-size: 20px;
+  }
+  #home .slider .slide p {
+    text-align: center;
+  }
+  .pricing .grid,
+  .fun-fact .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 375px) {
+  .why-section .container {
+    padding: 0;
+  }
+  .why-section .container .grid {
+    gap: 0;
+  }
+  .why-section .accordion {
+    height: auto;
+  }
+  .why-section .accordion .accordion-header {
+    font-size: 1.2rem;
+  }
+  .team .card {
+    height: auto;
+  }
+}
+@media screen and (max-width: 280px) {
+  .navbar .container .logo {
+    width: 100px;
+  }
+  .portfolio .gallery-item .content {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .portfolio .gallery-item .content p {
+    font-size: 1.2rem;
+  }
+  .portfolio .gallery-item .content .d-flex i {
+    font-size: 1.5rem;
+  }
+  .testimonial .slider .slide-col .imgBx {
+    width: 100px;
+    height: 100px;
+  }
+  .we-work .grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing .card .d-bg h3 {
+    font-size: 20px;
+  }
+  .team .card .imgBx {
+    margin-top: -140px;
+  }
+  .blog .card .content {
+    flex-direction: column;
+  }
+}
