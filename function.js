@@ -187,9 +187,15 @@ const body = document.querySelector("body");
 
 menuBtn.onclick = () => {
   menuBar.classList.add("active");
-    body.style.overflow = "hidden";
+  body.style.overflow = "hidden";
 };
 crossBtn.onclick = () => {
-  menuBar.classList.remove("active")
+  menuBar.classList.remove("active");
   body.style.overflow = "auto";
 };
+// ============================================ PRE LOADER==========================================
+const loader = document.getElementById("preloader");
+
+window.addEventListener("load", () => {
+  loader.style.display = "none";
+});
