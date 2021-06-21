@@ -15,6 +15,7 @@ p {
 }
 section {
   padding: 5.5rem 0;
+  overflow-x: hidden;
 }
 input:focus,
 textarea:focus {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon">
     <title>Klasik - HTML5 Responsive Corporate Template</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./styles/makeup.css">
     <link rel="stylesheet" href="./styles/utilities.css">
     <link rel="stylesheet" href="./styles/responsive.css">
@@ -71,7 +72,7 @@
             </div>
             <div class="container">
                 <div class="grid">
-                    <div class="details">
+                    <div class="details" data-aos="slide-right">
                         <h3 class="mb-2">Our Company Quality</h3>
                         <p>
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorem
@@ -84,7 +85,7 @@
                         </p>
                         <button class="m-button mt-3">Get In Touch</button>
                     </div>
-                    <div class="skills mb2">
+                    <div class="skills mb2" data-aos="slide-left">
                         <h3 class="mb-2">OUR SKILLS</h3>
                         <div class="skill">
                             <div class="skill-bar">
@@ -121,13 +122,13 @@
             </div>
             <div class="container">
                 <div class="grid">
-                    <div class="left">
+                    <div class="left" data-aos="slide-right">
                         <div class="imgBx">
                             <img src="./media/about/about.jpg" alt="aboutImage">
                             <div class="overlap"></div>
                         </div>
                     </div>
-                    <div class="right accordion">
+                    <div class="right accordion" data-aos="slide-left">
                         <div class="accordion-item">
                             <button class="accordion-header">
                                 <span>UNIQUE DESIGN</span>
@@ -174,7 +175,7 @@
                 <h2>SER<span>V</span>ICES</h2>
             </div>
             <div class="container">
-                <div class="grid">
+                <div class="grid" data-aos="slide-right">
                     <div class="box text-center">
                         <i class="lni lni-vector mb-2"></i>
                         <h3 class="mb-2">GRAPHIC</h3>
@@ -224,7 +225,7 @@
                         <li class="filter-item" data-filter="photography">photography</li>
                     </ul>
                 </div>
-                <div class="grid mt-3">
+                <div class="grid mt-3" data-aos="slide-left">
                     <div class="gallery-item design">
                         <div class="border"></div>
                         <div class="content text-center">
@@ -414,7 +415,7 @@
                 <h2>HOW <span>WE</span> WORK</h2>
             </div>
             <div class="container">
-                <div class="grid">
+                <div class="grid" data-aos="slide-right">
                     <div class="box text-center">
                         <span class="s-1"></span>
                         <span class="s-2"></span>
@@ -459,7 +460,7 @@
             <div class="section-head">
                 <h2>OUR RECE<span>NT</span> WORKS</h2>
             </div>
-            <div class="container">
+            <div class="container" data-aos="slide-left">
                 <p class="l-color text-center">
                     Er zijn vele variaties van passages van Lorem Ipsum beschikbaar maar het merendeel heeft te lijden gehad van
                     wijzigingen in een of andere vorm, door ingevoegde humor of willekeurig gekozen
@@ -494,7 +495,7 @@
             </div>
             <div class="pricing-container">
                 <div class="container">
-                    <div class="grid">
+                    <div class="grid" data-aos="slide-right">
                         <div class="card text-center">
                             <div class="d-bg">
                                 <h3 class="l-color">BASIC</h3>
@@ -569,7 +570,7 @@
                 <h2>OUR <span>T</span>EAM</h2>
             </div>
             <div class="container">
-                <div class="grid">
+                <div class="grid" data-aos="slide-left">
                     <div class="card text-center">
                         <div class="imgBx">
                             <div class="social d-bg py-2">
@@ -647,7 +648,7 @@
                 <h2>SOME F<span>UN</span> FACT</h2>
             </div>
             <div class="container">
-                <div class="grid">
+                <div class="grid" data-aos="slide-right">
                     <div class="box text-center l-color">
                         <i class="lni lni-coffee-cup"></i>
                         <h3>211</h3>
@@ -719,7 +720,7 @@
                 <h2>OUR <span>B</span>LOG</h2>
             </div>
             <div class="container">
-                <div class="grid">
+                <div class="grid" data-aos="slide-left">
                     <div class="card">
                         <div class="imgBx">
                             <img src="./media/blog/1.jpg" alt="Blog Image">
@@ -808,7 +809,7 @@
             </div>
             <div class="container">
                 <div class="grid">
-                    <div class="addresses l-color">
+                    <div class="addresses l-color" data-aos="slide-right">
                         <h3>K<span class="d-color">l</span>asik</h3>
                         <h5>We'd love To Meet You In Person Or Via The Web!</h5>
                         <p class="l-color">
@@ -830,7 +831,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form">
+                    <div class="form" data-aos="slide-left">
                         <div class="f-line d-flex">
                             <input type="text" placeholder="Your Name">
                             <input type="email" placeholder="Your Email">
@@ -909,5 +910,11 @@
             <p class="l-color">&copy;2035 Copyright, All Right Reserved</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000
+        });
+    </script>
 </body>
 </html>
